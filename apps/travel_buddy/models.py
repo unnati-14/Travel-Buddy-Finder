@@ -91,7 +91,7 @@ class Travel(models.Model):
     start= models.DateField()
     end= models.DateField()
     creator= models.ForeignKey(User, related_name= "planner", on_delete=models.CASCADE)
-    join= models.ManyToManyField(User, related_name="joiner") #holds on to instances of User
+    join= models.ManyToManyField(User, related_name="joiner") 
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     objects = travelManager()
